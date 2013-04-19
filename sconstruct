@@ -1,0 +1,5 @@
+#!/bin/bash
+
+myfile = env.Command('myfile.out', [], 'echo Hello world > $TARGETS')
+env.AlwaysBuild(myfile)
+./configure --with-ld-opt="-lstdc++" --add-module=../src/demo
